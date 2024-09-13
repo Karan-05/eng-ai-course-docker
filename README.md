@@ -1,6 +1,8 @@
 # eng-ai-course-docker
 
-Just Replace the docker compose file and Dockerfile in the original Repo,
+//For mac users only to use cpu as a resource
+
+Just Replace the docker compose file and Dockerfile in the original repo folder,
 
 docker-compose.yaml --> /eng-ai-agents/docker-compose.yaml
 
