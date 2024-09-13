@@ -1,0 +1,23 @@
+version: '3.9'
+
+services:
+  eng-ai-agents:
+    build:
+      context: "."
+      dockerfile: ./docker/Dockerfile.dev.gpu 
+    image: eng-ai-agents
+    platform: linux/arm64  
+    shm_size: '8gb'
+    user: user
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    environment:
+      - PLATFORM=macos
+    networks:
+      - eng-ai-agents-net
+networks:
+  eng-ai-agents-net:
+    driver: bridge
+
+volumes:
+  minio_data:
+  rye-cache:
